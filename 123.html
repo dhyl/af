@@ -1,0 +1,24 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>jQuery搜索联想</title>
+    <script src="jquery-1.4.2.js" type="text/javascript"></script>
+    <script src="script/jquery-ui.js" type="text/javascript"></script>
+    <link href="script/xiala.css" rel="stylesheet" type="text/css" />
+    <script>
+        $(function () {
+            var availableTags = ["ActionScript", "AppleScript", "Asp", "BASIC", "C", "C++", "Clojure", "COBOL", "ColdFusion", "Erlang", "Fortran", "Groovy", "Haskell", "Java", "JavaScript", "Lisp", "Perl", "PHP", "Python", "Ruby", "Scala", "Scheme"];
+            var tagvalue = $("#istags").val().split(',');
+            $("#tags").autocomplete({ source: tagvalue });
+        });  
+    </script>
+</head>
+<body>
+    <input id="istags" runat="server" type="hidden"/>
+    <div class="ui-widget">
+        <label for="tags">
+            Tags:
+        </label>
+        <input id="tags" /></div>
+</body>
+</html>
